@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_tweets",
+  "info": {
+    "displayName": "tweet",
+    "icon": "twitter"
+  },
+  "options": {},
+  "attributes": {
+    "Text": {
+      "type": "text"
+    },
+    "TweetTime": {
+      "type": "datetime"
+    },
+    "TweetDate": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

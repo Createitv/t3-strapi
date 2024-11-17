@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tweets",
+  "info": {
+    "singularName": "tweet",
+    "pluralName": "tweets",
+    "displayName": "Tweet"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tweet": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.tweet"
+    }
+  }
+}

@@ -62,6 +62,22 @@ export interface SharedSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedTweet extends Struct.ComponentSchema {
+  collectionName: 'components_shared_tweets';
+  info: {
+    displayName: 'tweet';
+    icon: 'twitter';
+  };
+  attributes: {
+    Text: Schema.Attribute.Text;
+    TweetDate: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    TweetTime: Schema.Attribute.DateTime;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -70,6 +86,7 @@ declare module '@strapi/strapi' {
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'shared.tweet': SharedTweet;
     }
   }
 }
